@@ -3,7 +3,7 @@ Functions to read and write to the main cordra database
 
 # Install 
 
-Go to this folder and use `pip install -e .` to intall and developer version
+Go to this folder and use `pip install -e .` to install and developer version
 
 Note you need to set then following envrionmental variables
 - `MATERIOM_USER`
