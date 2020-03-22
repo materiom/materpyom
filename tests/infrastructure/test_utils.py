@@ -31,3 +31,4 @@ class TestUtils:
         with pytest.raises(Exception):
             m.check_credentials()
 
+

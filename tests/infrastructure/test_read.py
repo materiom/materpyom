@@ -1,6 +1,6 @@
 import logging
 
-from materpyom.read import materiom_get_one_item, materiom_search
+from materpyom.read import materiom_get_one_item, materiom_search, materiom_search_by_type
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -17,5 +17,12 @@ class TestMateriomCordra:
         """Test to search function"""
 
         items = materiom_search("heated")
+
+        assert len(items['results']) != 0
+
+    def test_materiom_get_object_by_object_type(self):
+        """Test to search function"""
+
+        items = materiom_search_by_type("Material")
 
         assert len(items['results']) != 0

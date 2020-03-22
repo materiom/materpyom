@@ -83,3 +83,18 @@ class MateriomCordra:
         item = self.call_api(url=url)
 
         return item
+
+    def get_all_objects_by_type(self, object_type: str = "Material"):
+        """
+        Function to get objects from a certain type
+        :item object_type: the type of objects you want to be returned
+        :return: json object
+        """
+
+        logger.debug(f'Checking credentials')
+
+        url = f'{self.url_root}/objects/?query=type:"{object_type}"'
+
+        items = self.call_api(url=url)
+
+        return items
